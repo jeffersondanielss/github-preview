@@ -326,7 +326,6 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'bake:build',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
