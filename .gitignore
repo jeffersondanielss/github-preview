@@ -1,8 +1,0 @@
-node_modules
-bower_components
-npm-debug.log
-.sass-cache
-.tmp
-.DS_Store
-design.md
-/dist
