@@ -1,68 +1,49 @@
 <template>
-  <div class="profile">
-    <img  v-bind:src="user.avatar_url" class="profile__image" />
+  <h1 class="profile__title">{{ user }}</h1>
+ <!--  <div class="profile">
     <a href="{{ user.html_url }}" target="_blank">
       <p class="profile__name">{{ user.name }}</p>
     </a>
-    <p class="profile__bio">{{ user.login }}</p>
-    <p class="profile__followers">{{ user.followers }}</p>
-    <p class="profile__following">{{ user.following }}</p>
+     <p class="profile__bio">{{ user.login }}</p>
+    <img  v-bind:src="user.avatar_url" class="profile__image" />
+    <div class="profile__info">
+      <p class="profile__followers">{{ user.followers }}</p>
+      <p class="profile__following">{{ user.following }}</p>
+    </div>
     <p class="profile__company">{{ user.company }}</p>
     <p class="profile__blog">{{ user.blog }}</p>
     <p class="profile__localization">{{ user.localization }}</p>
-    <p class="profile__email">{{ user.email }}</p>
+    <p class="profile__email">{{ user.email }}</p> -->
   </div>
 </template>
 
 <script>
+import { getUser } from '../vuex/actions'
+
 export default {
 
   data () {
     return {
-      msg: 'dadas',
-      user: {
-        'login': 'jeffersondanielss',
-        'id': 6460622,
-        'avatar_url': 'https://avatars.githubusercontent.com/u/6460622?v=3',
-        'gravatar_id': '',
-        'url': 'https://api.github.com/users/jeffersondanielss',
-        'html_url': 'https://github.com/jeffersondanielss',
-        'followers_url': 'https://api.github.com/users/jeffersondanielss/followers',
-        'following_url': 'https://api.github.com/users/jeffersondanielss/following{/other_user}',
-        'gists_url': 'https://api.github.com/users/jeffersondanielss/gists{/gist_id}',
-        'starred_url': 'https://api.github.com/users/jeffersondanielss/starred{/owner}{/repo}',
-        'subscriptions_url': 'https://api.github.com/users/jeffersondanielss/subscriptions',
-        'organizations_url': 'https://api.github.com/users/jeffersondanielss/orgs',
-        'repos_url': 'https://api.github.com/users/jeffersondanielss/repos',
-        'events_url': 'https://api.github.com/users/jeffersondanielss/events{/privacy}',
-        'received_events_url': 'https://api.github.com/users/jeffersondanielss/received_events',
-        'type': 'User',
-        'site_admin': false,
-        'name': 'Jefferson Daniel',
-        'company': 'dbr.ag',
-        'blog': 'jeffersondanielss.github.io',
-        'location': 'São Paulo - Brasil',
-        'email': 'jeffersondanielss@gmail.com',
-        'hireable': null,
-        'bio': 'Self-taught Developer :books:',
-        'public_repos': 22,
-        'public_gists': 4,
-        'followers': 15,
-        'following': 61,
-        'created_at': '2014-01-21T13:26:13Z',
-        'updated_at': '2016-07-16T19:43:44Z'
-      }
+      user: this.name || 'dasda'
     }
-  }
+  },
 
-  // ready () {
-  //   var self = this;
-  //   this.$http.get('https://api.github.com/users/jeffersondanielss').then((response) => {
-  //    this.$set('user', response.json())
-  //   }, (response) => {
-  //     console.log('error');
-  //   });
-  // }
+  vuex: {
+    state: {
+      user: function (state) {
+        console.log(this.name)
+        return state.user
+      }
+    },
+
+    actions: {
+      getUser
+    }
+  },
+
+  created: function () {
+    console.log(this.user)
+  }
 
 }
 </script>
@@ -72,10 +53,8 @@ export default {
 
   .profile {
     background-color: #fff;
-    width: 30%;
-    margin: 0 auto;
-    box-shadow: 0 2px 5px #CCC;
-    padding: 20px;
+    padding: 5%;
+    height: 70%;
   }
 
   .profile__image {
@@ -83,9 +62,42 @@ export default {
     width: 150px;
     height: 150px;
     margin: 0 auto;
+    border-radius: 50%;
   }
 
-  .profile__name, .profile__bio {
+  .profile__info {
+    background-color: #f5f5f5;
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid #CCC;
+    float: left;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .profile__followers {
+    width: 50%;
+    float: left;
+    text-align: center;
+  }
+
+  .profile__following {
+    width: 50%;
+    float: left;
+    text-align: center;
+  }
+
+  .profile__title {
+    display: inline-block;
+    font-size: 20px;
+    margin: 40px 0 10px
+  }
+
+  .profile__name,
+  .profile__bio,
+  .profile__company,
+  .profile__blog,
+  .profile__localization,
+  .profile__email {
     text-align: center;
   }
 

@@ -1,0 +1,7 @@
+{
+  "name": "github-preview",
+  "version": "0.1.0",
+  "dependencies": {
+    "octicons": "~2.2.2"
+  }
+}

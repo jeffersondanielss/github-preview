@@ -22,7 +22,6 @@ export default {
 <style scoped>
   h1 {
     color: #42b983;
-    text-align: center;
-    font-size: 70px;
+    font-size: 20px;
   }
 </style>

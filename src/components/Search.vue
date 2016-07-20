@@ -1,21 +1,28 @@
 <template>
   <div class="search">
-    <input type="text">
-    <button>Procurar</button>
+    <p>{{name}}</p>
+    <input type="text" v-model="name">
+    <button @click="setUser(name)">Procurar</button>
   </div>
 </template>
 
 <script>
+import { setUser } from '../vuex/actions'
+
 export default {
   data () {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'search'
+      name: ''
     }
-  }
+  },
+
+  vuex: {
+    actions: {
+      setUser
+    }
+  },
+
+  methods: {}
 }
 </script>
 
