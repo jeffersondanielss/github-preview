@@ -24,6 +24,7 @@ export default new Vuex.Store({
 
     GET_USER: (state, username) => {
       this.$http.get('https://api.github.com/users/' + username).then((response) => {
+        state.user.$set('profile', 'jeff')
         state.user.$set('profile', response.json())
       }, (response) => {
         console.log('error')

@@ -1,4 +1,5 @@
 <template>
+  <h1 class="profile__title">{{ username }}</h1>
   <h1 class="profile__title">{{ user }}</h1>
  <!--  <div class="profile">
     <a href="{{ user.html_url }}" target="_blank">
@@ -23,27 +24,24 @@ import { getUser } from '../vuex/actions'
 export default {
 
   data () {
-    return {
-      user: this.name || 'dasda'
-    }
+    return {}
   },
 
   vuex: {
-    state: {
-      user: function (state) {
-        console.log(this.name)
-        return state.user
-      }
-    },
+    state: {},
 
     actions: {
       getUser
+    },
+
+    getters: {
+      username: state => state.name
     }
   },
 
-  created: function () {
-    console.log(this.user)
-  }
+  created: () => {},
+
+  computed: () => {}
 
 }
 </script>
