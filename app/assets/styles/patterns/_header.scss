@@ -1,0 +1,241 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: url(../images/bg.png);
+}
+
+a {
+  color: currentColor;
+}
+
+.container {
+  width: 40%;
+  margin: 20px auto;
+  border: 1px solid darken($color-2, 2%);
+  border-radius: 4px;
+  background: $color-2;
+  color: $text-color;
+}
+
+.show-search {
+  position: absolute;
+  top: 27px;
+  left: 20px;
+
+  i {
+    color: $color-1;
+    font-size: 26px;
+  }
+}
+
+.inputs {
+  text-align: center;
+  background: #F5F5F5;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+
+  li {
+    display: inline;
+  }
+}
+
+.header {
+  background: $color-1;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.info  {
+  margin: 30px auto;
+  text-align: center;
+
+  li {
+    margin-bottom: 7px;
+  }
+
+  .octicon {
+    margin-right: 10px;
+  }
+}
+
+.image-user {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(0px);
+  border: 3px solid $color-1;
+}
+
+.about {
+  margin-top: 90px;
+}
+
+.name, .username {
+  text-align: center;
+}
+
+.name {
+  font-size: 24px;
+  color: $color-1;
+  margin-bottom: 5px;
+}
+
+.username {
+  font-size: 16px;
+}
+
+.repositorios {
+  overflow: hidden;
+  width: 100%;
+  display: none;
+}
+
+.fastslide {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  float: left;
+}
+
+.repo-list {
+  padding: 20px;
+
+  li a {
+    color: $text-color;
+    padding: 5px 0;
+  }
+}
+
+.numbers {
+  @extend .clearfix;
+  color: $color-1;
+  text-align: center;
+  border-top: 1px solid lighten($color-2, 5%);
+  border-bottom: 1px solid lighten($color-2, 5%);
+
+  &:first-child {
+    border-bottom: none;
+  }
+
+  li {
+    border-left: 1px solid lighten($color-2, 5%);
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  p {
+    margin-top: 3px;
+    color: $text-color;
+  }
+}
+
+.seguidores, .seguindo, .favoritos, .repositories, .forks, .organizations {
+  float: left;
+  width: 33.3333%;
+  padding: 20px 0;
+
+  .octicon {
+    margin-bottom: 10px;
+  }
+
+  &:hover .octicon {
+    color: $text-color;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.fork {
+  float: left;
+}
+
+.last-update {
+  float: right;
+}
+
+.box-repo {
+  border-top: 1px solid lighten($color-2, 5%);
+  border-bottom: 1px solid darken($color-2, 5%);
+  padding: 10px 0;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 30px;
+  }
+}
+
+.repo-list .octicon {
+  margin-right: 25px;
+}
+
+.repositories, .forks, .organizations {
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-1;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.numbers .ative {
+  border-bottom: 2px solid $color-1 !important;
+  transition: 0.5s ease-in-out;
+
+  i {
+    color: $text-color;
+  }
+}
+
+.org-img {
+  width: 42px;
+  height: 42px;
+
+  img {
+    width: inherit;
+  }
+}
+
+.code {
+  display: inline-block;
+  border: none;
+  padding: 20px 20px;
+}
+
+.info-request {
+  text-align: center;
+
+  span {
+    font-size: 50px;
+    margin-bottom: 15px;
+    margin-right: 0px !important;
+  }
+}
+
+.field, .request {
+  padding: 10px 15px;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px #ccc;
+}
+
+.request {
+  background: $color-1;
+  color: #fff;
+}
