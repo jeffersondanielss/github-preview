@@ -1,0 +1,19 @@
+.orgs {
+  width: 80%;
+  margin: 0 auto;
+}
+
+  .orgs__wrapper {
+    display: inline-block;
+    border: none;
+    padding: 10px;
+  }
+
+  .orgs__img {
+    width: 42px;
+    height: 42px;
+
+    img {
+      width: inherit;
+    }
+  }

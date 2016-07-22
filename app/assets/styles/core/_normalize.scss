@@ -10,6 +10,17 @@ html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%
 }
 
 /**

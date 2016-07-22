@@ -14,108 +14,81 @@
 
   </head>
 <body>
-<div class="show-search">
-  <i class="octicon octicon-search"></i>
-</div>
 
-<div class="search">
-  <ul class="inputs">
-    <li>
-      <input type="text" class="field" placeholder="github user">
-    </li>
-    <li>
-      <input type="submit" class="request" value="Search">
-    </li>
-  </ul>
-</div>
-
-<section class="container" style="display: none;">
-
-  <header class="header">
-  </header>
-  <img class="image-user" src="" alt="">
-
-  <div class="about">
-    <h1 class="name"></h1>
-    <h2 class="username"></h2>
-  </div>
-<div>
-
-  <ul class="info">
-    <li class="company">
-      <i class="octicon octicon-organization"></i>
-      <span></span>
-    </li>
-    <li class="blog">
-      <i class="octicon octicon-link"></i>
-      <span></span>
-    </li>
-    <li class="localization">
-      <i class="octicon octicon-location"></i>
-      <span></span>
-    </li>
-    <li class="email">
-      <i class="octicon octicon-mail"></i>
-      <span></span>
-    </li>
-    <li class="created-date">
-      <i class="octicon octicon-clock"></i>
-      <span></span>
-    </li>
-  </ul>
-
+  <div class="search">
+    <ul class="inputs">
+      <li>
+        <input type="text" class="field" placeholder="github user">
+      </li>
+      <li>
+        <input type="submit" class="request" value="Search">
+      </li>
+    </ul>
   </div>
 
-  <ul class="numbers">
-    <li class="seguidores">
-      <span></span>
-      <p>Followers</p>
-    </li>
-    <li class="favoritos">
-      <span></span>
-      <p>Starred</p>
-    </li>
-    <li class="seguindo">
-      <span></span>
-      <p>Following</p>
-    </li>
-  </ul>
+  <div class="wrapper">
 
-  <ul class="numbers" data-dots>
+    <section class="profile">
 
-    <li class="repositories" data-dot>
-      <i class="octicon octicon-repo"></i>
-      <p>Repositories</p>
-    </li>
+      <header class="header">
+        <img class="image-user" src="" alt="">
+      </header>
+      
 
-    <li class="forks" data-dot>
-      <i class="octicon octicon-repo-forked"></i>
-      <p>Forks</p>
-    </li>
+      <div class="about">
+        <h1 class="name"></h1>
+      </div>
 
-    <li class="organizations" data-dot>
-      <i class="octicon octicon-organization"></i>
-      <p>Organizations</p>
-    </li>
-
-  </ul>
-
-  <div class="repositorios">
-    <div class="fastslide">
-
-      <ul class="repo-list image">
+      <ul class="info">
+        <li class="company">
+          <i class="octicon octicon-organization"></i>
+          <span></span>
+        </li>
+        <li class="blog">
+          <i class="octicon octicon-link"></i>
+          <span></span>
+        </li>
+        <li class="localization">
+          <i class="octicon octicon-location"></i>
+          <span></span>
+        </li>
+        <li class="email">
+          <i class="octicon octicon-mail"></i>
+          <span></span>
+        </li>
+        <li class="created-date">
+          <i class="octicon octicon-clock"></i>
+          <span></span>
+        </li>
       </ul>
 
-      <ul class="repo-list image">
+      <div class="orgs"></div>
+
+      <ul class="numbers">
+        <li class="seguidores">
+          <span></span>
+          <p>Followers</p>
+        </li>
+        <li class="favoritos">
+          <span></span>
+          <p>Starred</p>
+        </li>
+        <li class="seguindo">
+          <span></span>
+          <p>Following</p>
+        </li>
       </ul>
 
-      <ul class="repo-list image">
-      </ul>
+    </section>
 
+    <div class="repositorios">
+      <div class="fastslide">
+
+        <div class="repo-list"></div>
+
+      </div>
     </div>
   </div>
-
-</section>
 
   <!-- build:js({app,.tmp}) assets/scripts/vendor.js -->
   <script src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -123,6 +96,12 @@
   <!-- endbuild -->
 
   <!-- build:js({app,.tmp}) assets/scripts/main.js -->
+  <script src="assets/scripts/app.js"></script>
+  <script src="assets/scripts/utils.js"></script>
+  <script src="assets/scripts/showUser.js"></script>
+  <script src="assets/scripts/getRepo.js"></script>
+  <script src="assets/scripts/getOrg.js"></script>
+  <script src="assets/scripts/getUser.js"></script>
   <script src="assets/scripts/main.js"></script>
   <!-- endbuild -->
 </body>

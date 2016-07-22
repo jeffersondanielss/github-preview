@@ -1,0 +1,13 @@
+[data-repo="true"] {
+  i {
+    @extend .octicon-repo-forked;
+    color: $text-color;
+  }
+}
+
+[data-repo="false"] {
+  i {
+    @extend .octicon-repo;
+    color: $text-color;
+  }
+}
