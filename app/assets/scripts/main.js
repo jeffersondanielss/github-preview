@@ -10,6 +10,7 @@
     app.getUser(userName);
     app.getOrg(userName);
     app.getRepo(userName);
+    $('.no-user').fadeOut('slow');
   });
 
 })();
