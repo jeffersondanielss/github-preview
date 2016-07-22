@@ -109,7 +109,7 @@ module.exports = function (grunt) {
             '.tmp',
             '<%= path.dist %>/*',
             '!<%= path.dist %>/.git*',
-            '!<%= path.dist %>/.tmp/',
+            '!<%= path.dist %>/app',
             '!<%= path.dist %>/bower_components',
             '!<%= path.dist %>/node_modules',
             '!<%= path.dist %>/Gruntfile.js',
@@ -371,8 +371,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'usemin',
-    'htmlmin',
+    'usemin'
   ]);
 
   grunt.registerTask('psi', [ 'pagespeed' ]);

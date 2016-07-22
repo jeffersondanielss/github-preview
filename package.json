@@ -4,7 +4,7 @@
   "description": "insertdescription",
   "scripts": {
     "serve": "grunt serve",
-    "build": "grunt build"
+    "build": "grunt build && git checkout app/"
   },
 
   "devDependencies": {
