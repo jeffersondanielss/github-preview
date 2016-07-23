@@ -22,7 +22,7 @@ app.getOrg = function( user ){
     success: function(data) {
       if ( data.length ) {
 
-        orgs.empty()
+        orgs.empty();
         for( current in data) {
           orgs.append('<li class="orgs__wrapper"><a class="orgs__img" href="http://github.com/' + data[current].login + '" target="_blank"><img src="'+ data[current].avatar_url +'" title="' + data[current].login + '" alt="' + data[current].login + '" /> </a></li>');
         }

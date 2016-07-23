@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.tmp) assets/styles/main.css -->
+    <link rel="stylesheet" href="../bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <!-- endbuild -->
     <!-- build:js assets/scripts/vendor/modernizr.js -->
@@ -31,7 +32,7 @@
     <div class="no-user">
       <div class="no-user__content">
         <span class="octicon octicon-organization"></span>
-         <p>This user not have organizations</p>
+         <p>Insira um usuário do Github</p>
       </div>
     </div>
 
@@ -89,16 +90,19 @@
     </section>
 
     <div class="repositorios">
-      <div class="fastslide">
-
-        <div class="repo-list"></div>
-
-      </div>
+      <div class="repo-list" id="container"></div>
     </div>
+
+      <nav class="footer">
+        <a href="http://github.com/jeffersondanielss/github-preview" target="_blank" class="footer__link">
+          <i class="octicon octicon-logo-github"></i>
+        </a>
+      </nav>
   </div>
 
   <!-- build:js({app,.tmp}) assets/scripts/vendor.js -->
   <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js"></script>
   <script src="assets/scripts/vendor/fastslide.js"></script>
   <!-- endbuild -->
 

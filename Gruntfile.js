@@ -235,16 +235,16 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care
     // of minification. These next options are pre-configured if you do not
     // wish to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= path.dist %>/styles/main.css': [
-    //         '.tmp/assets/styles/{,*/}*.css',
-    //         '<%= path.app %>/assets/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= path.dist %>assets/styles/main.css': [
+            '.tmp/assets/styles/{,*/}*.css',
+            '<%= path.app %>/assets/styles/{,*/}*.css'
+          ]
+        }
+      }
+    },
 
     // Copies remaining files to places other tasks can use
     copy: {
@@ -368,10 +368,11 @@ module.exports = function (grunt) {
     'concurrent:dist',
     'autoprefixer',
     'concat',
-    'cssmin',
     'uglify',
+    'cssmin',
     'copy:dist',
-    'usemin'
+    'usemin',
+    'htmlmin'
   ]);
 
   grunt.registerTask('psi', [ 'pagespeed' ]);

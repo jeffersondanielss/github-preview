@@ -1,0 +1,17 @@
+.footer {
+  @extend .clearfix;
+  text-align: center;
+  color: $highlight-color;
+  clear: both;
+
+  &__link {
+    padding: 40px 10px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .octicon {
+    font-size: 30px;
+  }
+}
