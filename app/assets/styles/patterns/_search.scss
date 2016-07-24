@@ -1,30 +1,16 @@
-.show-search {
-  position: absolute;
-  top: 27px;
-  left: 20px;
-
-  i {
-    color: $highlight-color;
-    font-size: 26px;
-  }
-}
-
-.inputs {
+.search {
   text-align: center;
   background: #2D3035;
   padding: 20px 0;
 
-  li {
-    display: inline;
+  &__field {
+    padding: 10px 15px;
   }
-}
 
-.field, .request {
-  padding: 10px 15px;
-  border-radius: 3px;
-}
-
-.request {
-  background: $highlight-color;
-  color: #fff;
+  &__btn {
+    background: $highlight-color;
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: $bold;
+  }
 }

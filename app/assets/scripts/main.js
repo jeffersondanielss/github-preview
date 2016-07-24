@@ -3,11 +3,11 @@
 (function init(){
 
   var userName = '',
-      input = $('.field');
+      input = $('.search__field');
 
   $('body').perfectScrollbar();
 
-  $('.request').click( function(){
+  $('.search__btn').click( function(){
     userName = input.val();
     app.getUser(userName);
     app.getOrg(userName);

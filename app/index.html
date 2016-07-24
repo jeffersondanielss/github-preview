@@ -17,14 +17,8 @@
 <body>
 
   <div class="search">
-    <ul class="inputs">
-      <li>
-        <input type="text" class="field" placeholder="github user">
-      </li>
-      <li>
-        <input type="submit" class="request" value="Search">
-      </li>
-    </ul>
+    <input type="text" class="search__field" placeholder="GitHub User">
+    <input type="submit" class="search__btn" value="Search">
   </div>
 
   <div class="wrapper">
@@ -32,7 +26,7 @@
     <div class="no-user">
       <div class="no-user__content">
         <span class="octicon octicon-organization"></span>
-         <p>Insira um usuário do Github</p>
+         <p>Insira um usuário do GitHub</p>
       </div>
     </div>
 
@@ -43,49 +37,54 @@
       </header>
       
 
-      <div class="about">
-        <h1 class="name"></h1>
-      </div>
+      <h1 class="name"></h1>
 
       <ul class="info">
-        <li class="company">
+        <li class="info__item company">
           <i class="octicon octicon-organization"></i>
           <span></span>
         </li>
-        <li class="blog">
+
+        <li class="info__item blog">
           <i class="octicon octicon-link"></i>
           <span></span>
         </li>
-        <li class="localization">
+
+        <li class="info__item localization">
           <i class="octicon octicon-location"></i>
           <span></span>
         </li>
-        <li class="email">
+
+        <li class="info__item email">
           <i class="octicon octicon-mail"></i>
           <span></span>
         </li>
-        <li class="created-date">
+
+        <li class="info__item created-date">
           <i class="octicon octicon-clock"></i>
           <span></span>
         </li>
       </ul>
 
-      <div class="orgs"></div>
-
       <ul class="numbers">
         <li class="seguidores">
+          <i class="octicon octicon-organization"></i>
           <span></span>
           <p>Followers</p>
         </li>
         <li class="favoritos">
+          <i class="octicon octicon-star"></i>
           <span></span>
           <p>Starred</p>
         </li>
         <li class="seguindo">
+          <i class="octicon octicon-person"></i>
           <span></span>
           <p>Following</p>
         </li>
       </ul>
+
+      <div class="orgs"></div>
 
     </section>
 

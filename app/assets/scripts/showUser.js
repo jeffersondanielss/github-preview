@@ -10,7 +10,7 @@ app.showUser = function ( user ) {
       blog = user.blog,
       location = user.location,
       email = user.email,
-      created_at = user.created_at,
+      created_at = new Date(user.created_at),
       followers = user.followers,
       following = user.following,
       starred = user.starred_url.length;
@@ -26,7 +26,7 @@ app.showUser = function ( user ) {
   $('.blog span').append('<a href="' + blog + '" target="_blank">' + blog + '</a>');
   $('.localization span').append(location);
   $('.email span').append(email);
-  $('.created-date span').append(created_at);
+  $('.created-date span').append(created_at.toDateString());
   $('.seguidores span').append(followers);
   $('.favoritos span').append(starred);
   $('.seguindo span').append(following);

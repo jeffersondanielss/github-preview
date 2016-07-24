@@ -3,11 +3,7 @@ app.getOrg = function( user ){
 
   var url = 'https://api.github.com/users/' + user + '/orgs',
       current,
-      orgs = $('.orgs'),
-      empty = '<li class="box-repo info-request">' +
-                '<span class="octicon octicon-organization"></span>' +
-                '<p>This user not have organizations</p>' +
-              '</li>';
+      orgs = $('.orgs');
 
   $.ajax({
     url: url,
@@ -16,7 +12,7 @@ app.getOrg = function( user ){
 
     // parametros: jqXHR
     beforeSend: function() {
-      console.info('Iniciada a requisição ajax.');
+      orgs.empty();
     },
 
     success: function(data) {
@@ -27,8 +23,6 @@ app.getOrg = function( user ){
           orgs.append('<li class="orgs__wrapper"><a class="orgs__img" href="http://github.com/' + data[current].login + '" target="_blank"><img src="'+ data[current].avatar_url +'" title="' + data[current].login + '" alt="' + data[current].login + '" /> </a></li>');
         }
 
-      } else {
-        orgs.append(empty);
       }
     },
 

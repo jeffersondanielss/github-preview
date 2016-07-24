@@ -9,13 +9,10 @@ app.getUser = function ( user ) {
     dataType: 'json',
 
     // parametros: jqXHR
-    beforeSend: function() {
-      $('.repo-list').empty();
-    },
+    beforeSend: function() {},
 
     success: function(data) {
       app.showUser(data);
-      $('.container').show('slow');
     },
 
     // parametros: jqXHR, textStatus, errorThrown
