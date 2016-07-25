@@ -12,8 +12,7 @@ app.showUser = function ( user ) {
       email = user.email,
       created_at = new Date(user.created_at),
       followers = user.followers,
-      following = user.following,
-      starred = user.starred_url.length;
+      following = user.following;
 
   
 
@@ -27,9 +26,8 @@ app.showUser = function ( user ) {
   $('.localization span').append(location);
   $('.email span').append(email);
   $('.created-date span').append(created_at.toDateString());
-  $('.seguidores span').append(followers);
-  $('.favoritos span').append(starred);
-  $('.seguindo span').append(following);
+  $('.followers span').append(followers);
+  $('.following span').append(following);
 
   app.validateOutput(name, '.name');
   app.validateOutput(username, '.username');
@@ -38,4 +36,6 @@ app.showUser = function ( user ) {
   app.validateOutput(blog, '.blog');
   app.validateOutput(location, '.localization');
   app.validateOutput(email, '.email');
+
+  $('.no-user').fadeOut('slow');
 };

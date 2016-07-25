@@ -26,10 +26,6 @@ body {
   position: relative;
 }
 
-.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y {
-  background-color: $highlight-color;
-}
-
 /**
  * Remove default margin.
  */
@@ -449,3 +445,7 @@ blockquote {
 .clearfix {display: inline-block;}
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
+
+.blur {
+  filter: blur(5px);
+}

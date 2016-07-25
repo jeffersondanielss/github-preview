@@ -1,18 +1,25 @@
 'use strict';
 
-(function init(){
+(function(){
 
   var userName = '',
       input = $('.search__field');
 
-  $('body').perfectScrollbar();
+  app.setCustomScroll('body');
 
-  $('.search__btn').click( function(){
+  function init() {
     userName = input.val();
+    
+    if( !userName.length ) { return; }
+
     app.getUser(userName);
     app.getOrg(userName);
     app.getRepo(userName);
-    $('.no-user').fadeOut('slow');
-    $('.repositorios').perfectScrollbar();
-  });
+    app.setCustomScroll('.repositorios');
+    app.animation('[data-animate="true"]', 'pulse');
+  }
+
+  app.onEnterKey( init );
+  $('.search__btn').click( init );
+
 })();

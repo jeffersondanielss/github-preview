@@ -1,7 +1,7 @@
 {
   "name": "github-preview",
-  "version": "0.3.0",
-  "description": "insertdescription",
+  "version": "0.0.1",
+  "description": "Use the GitHub API to search profiles",
   "scripts": {
     "serve": "grunt serve",
     "build": "grunt build && git checkout app"
@@ -27,8 +27,6 @@
     "load-grunt-tasks": "^3.1.0",
     "time-grunt": "^1.1.0"
   },
-
-  "readme": "You need in command line insert bower and npm install if necessary",
   "author": "Jefferson Daniel <jeffersondaniels@hotmail.com> (http://twitter.com/jeffersondss_)",
 
   "repository": {

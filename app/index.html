@@ -1,17 +1,25 @@
 <!doctype html>
-<html lang="pt-br" class="no-js">
+<html lang="en" class="no-js">
   <head>
     <meta charset="UTF-8">
-    <title>Github preview</title>
-    <meta name="description" content="">
+    <title>GitHub Preview - Use the GitHub API to search profiles</title>
+    <meta name="description" content="Use the GitHub API to search profiles.">
     <meta name="viewport" content="width=device-width">
     <!-- build:css(.tmp) assets/styles/main.css -->
-    <link rel="stylesheet" href="../bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css">
+<!--     <link rel="stylesheet" href="../bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css"> -->
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <!-- endbuild -->
     <!-- build:js assets/scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <meta property="og:title" content="GitHub Preview">
+    <meta property="og:description" content="Use the GitHub API to search profiles.">
+    <meta property="og:url" content="http://jeffersondanielss.github.io/github-preview/">
+    <meta property="og:image" content="http://jeffersondanielss.github.io/github-preview/assets/images/github-preview.png">
+
+    <link rel="icon" href="assets/images/favicon.png">
 
   </head>
 <body>
@@ -21,12 +29,12 @@
     <input type="submit" class="search__btn" value="Search">
   </div>
 
-  <div class="wrapper">
+  <div class="wrapper" data-animate="true">
 
     <div class="no-user">
       <div class="no-user__content">
-        <span class="octicon octicon-organization"></span>
-         <p>Insira um usuário do GitHub</p>
+        <span class="octicon octicon-person"></span>
+         <p>Enter a GitHub user</p>
       </div>
     </div>
 
@@ -67,17 +75,13 @@
       </ul>
 
       <ul class="numbers">
-        <li class="seguidores">
+        <li class="followers">
           <i class="octicon octicon-organization"></i>
           <span></span>
           <p>Followers</p>
         </li>
-        <li class="favoritos">
-          <i class="octicon octicon-star"></i>
-          <span></span>
-          <p>Starred</p>
-        </li>
-        <li class="seguindo">
+
+        <li class="following">
           <i class="octicon octicon-person"></i>
           <span></span>
           <p>Following</p>

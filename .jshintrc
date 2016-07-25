@@ -16,6 +16,8 @@
   "strict": true,
   "globals": {
     "$": false,
-    "app": false
+    "app": false,
+    "document": false,
+    "window": false
   }
 }
