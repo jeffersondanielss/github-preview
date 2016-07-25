@@ -1,0 +1,21 @@
+.orgs {
+  width: 90%;
+  margin: 20px auto;
+}
+
+  .orgs__wrapper {
+    display: inline-block;
+    border: none;
+    padding: 10px;
+  }
+
+  .orgs__img {
+    width: 25px;
+    height: 25px;
+    border-bottom: 2px solid $highlight-color;
+    padding-bottom: 2px;
+
+    img {
+      width: inherit;
+    }
+  }

@@ -1,0 +1,14 @@
+@import '../../../../bower_components/perfect-scrollbar/src/css/main.scss';
+
+.ps-theme-github-preview {
+  @include ps-container(map-merge($ps-theme-default, (
+    border-radius: $ps-border-radius,
+    rail-default-opacity: $ps-rail-default-opacity,
+    rail-container-hover-opacity: $ps-rail-container-hover-opacity,
+    rail-hover-opacity: $ps-rail-hover-opacity,
+    bar-bg: $ps-bar-bg,
+    bar-container-hover-bg: $highlight-color,
+    bar-hover-bg: $highlight-color,
+    rail-hover-bg: $ps-bar-bg
+  )));
+}

@@ -1,0 +1,61 @@
+.repositorios {
+  width: 50%;
+  margin-top: 5%;
+  float: left;
+  background: $primary-color;
+  position: relative;
+  height: 100%;
+}
+.repo-list {
+  padding: 20px;
+
+  .octicon {
+    margin-right: 25px;
+  }
+
+  li a {
+    color: $text-color;
+    padding: 5px 0;
+  }
+}
+
+.repo__item {
+  border-top: 1px solid lighten($primary-color, 5%);
+  border-bottom: 1px solid darken($primary-color, 5%);
+  padding: 10px 0;
+  color: $text-color;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.repo__item-last-update {
+  float: right;
+}
+
+[data-repo="true"] {
+  .octicon {
+    @extend .octicon-repo-forked;
+    
+  }
+}
+
+[data-repo="false"] {
+  .octicon {
+    @extend .octicon-repo;
+  }
+}
+
+
+@media screen and ( max-width: 900px ) {
+  .repositorios {
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+  }
+}
