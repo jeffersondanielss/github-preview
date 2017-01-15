@@ -6,8 +6,8 @@
     "serve": "grunt serve",
     "build": "grunt build && git checkout app"
   },
-
   "devDependencies": {
+    "grunt": "^1.0.1",
     "grunt-autoprefixer": "^2.2.0",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-clean": "^0.6.0",
@@ -28,12 +28,10 @@
     "time-grunt": "^1.1.0"
   },
   "author": "Jefferson Daniel <jeffersondaniels@hotmail.com> (http://twitter.com/jeffersondss_)",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/jeffersondanielss/github-preview.git"
   },
-
   "engines": {
     "node": ">=0.10.0"
   }
